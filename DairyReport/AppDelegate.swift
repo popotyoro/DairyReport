@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TodoistConvert
+//  DairyReport
 //
-//  Created by 鈴木 耕介 on 2017/04/14.
-//  Copyright © 2017年 鈴木 耕介. All rights reserved.
+//  Created by Popota on 2017/04/14.
+//  Copyright © 2017年 Popota. All rights reserved.
 //
 
 import Cocoa

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -10,25 +11,29 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="TodoistConvert" id="1Xt-HY-uBw">
+                            <menuItem title="DairyReport" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="TodoistConvert" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="DairyReport" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About TodoistConvert" id="5kV-Vb-QxS">
+                                        <menuItem title="About DairyReport" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="aFK-ni-Giw" kind="show" id="iWF-aX-RRa"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide TodoistConvert" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide DairyReport" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -46,7 +51,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit TodoistConvert" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit DairyReport" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -639,7 +644,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="TodoistConvert Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="DairyReport Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -653,7 +658,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TodoistConvert" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -676,32 +681,237 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--設定-->
+        <scene sceneID="CPU-kJ-O2M">
             <objects>
-                <viewController id="5gI-5U-AMq" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <viewController title="設定" id="aFK-ni-Giw" customClass="PreferenceViewController" customModule="TodoistConvert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="rX2-8b-9Wz">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
-                                <rect key="frame" x="115" y="124" width="250" height="22"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpe-Co-i4b">
+                                <rect key="frame" x="18" y="263" width="65" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="■ API Key" id="b9i-ln-kIF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4C-gW-jnG">
+                                <rect key="frame" x="30" y="231" width="200" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="rKk-XG-fE2"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Toggl API Key" drawsBackground="YES" id="xZH-VG-ORf">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDr-Yf-391">
+                                <rect key="frame" x="18" y="125" width="42" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="■ dev" id="HJo-hh-xFz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja7-dc-yIa">
+                                <rect key="frame" x="30" y="93" width="100" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="GkD-BK-65n"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="開発XX部" drawsBackground="YES" id="CrM-t1-o0T">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rp-nf-Ogm">
+                                <rect key="frame" x="223" y="125" width="55" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="■ Name" id="4a1-yz-Pgw">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-j6-aZN">
+                                <rect key="frame" x="366" y="35" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2rr-RB-5ua">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveButtonDidPush:" target="aFK-ni-Giw" id="JSK-sh-DGk"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpC-nh-wiY">
+                                <rect key="frame" x="18" y="204" width="89" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="■ User-Agent" id="FcJ-RH-zgZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkI-hU-f1C">
+                                <rect key="frame" x="30" y="172" width="100" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7z8-df-6M3"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Taro-Suzuki" drawsBackground="YES" id="7ah-PB-QJC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPt-Ah-lbt">
+                                <rect key="frame" x="223" y="204" width="92" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="■ Work Space" id="eOw-03-IXU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaT-qS-sok">
+                                <rect key="frame" x="235" y="172" width="100" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ff6-6F-vf3"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="1234567" drawsBackground="YES" id="vje-D2-MxT">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuO-Ym-XhS">
+                                <rect key="frame" x="235" y="93" width="100" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="IeJ-Jf-Y0n"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="your name" drawsBackground="YES" id="yBn-ff-O3o">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xaT-qS-sok" firstAttribute="top" secondItem="pkI-hU-f1C" secondAttribute="top" id="1Ao-sS-DkC"/>
+                            <constraint firstItem="tDr-Yf-391" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="20" id="B10-ib-kmN"/>
+                            <constraint firstItem="b4C-gW-jnG" firstAttribute="top" secondItem="xpe-Co-i4b" secondAttribute="bottom" constant="10" id="Fo9-FQ-ANY"/>
+                            <constraint firstItem="cuO-Ym-XhS" firstAttribute="top" secondItem="Ja7-dc-yIa" secondAttribute="top" id="HDk-T9-hqH"/>
+                            <constraint firstItem="BF6-j6-aZN" firstAttribute="top" secondItem="cuO-Ym-XhS" secondAttribute="bottom" constant="30" id="HP3-md-n4k"/>
+                            <constraint firstItem="cuO-Ym-XhS" firstAttribute="leading" secondItem="xaT-qS-sok" secondAttribute="leading" id="ISV-tT-s8W"/>
+                            <constraint firstItem="tDr-Yf-391" firstAttribute="top" secondItem="pkI-hU-f1C" secondAttribute="bottom" constant="30" id="Mts-nr-xIs"/>
+                            <constraint firstItem="xpe-Co-i4b" firstAttribute="top" secondItem="rX2-8b-9Wz" secondAttribute="top" constant="20" id="OXa-qy-s6u"/>
+                            <constraint firstItem="xpe-Co-i4b" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="20" id="P39-St-1YI"/>
+                            <constraint firstItem="xaT-qS-sok" firstAttribute="leading" secondItem="KPt-Ah-lbt" secondAttribute="leading" constant="10" id="R0w-fj-uHf"/>
+                            <constraint firstItem="KPt-Ah-lbt" firstAttribute="leading" secondItem="qpC-nh-wiY" secondAttribute="trailing" constant="120" id="RI7-BS-nK0"/>
+                            <constraint firstItem="qpC-nh-wiY" firstAttribute="top" secondItem="b4C-gW-jnG" secondAttribute="bottom" constant="10" id="Sxa-DT-JEI"/>
+                            <constraint firstItem="Ja7-dc-yIa" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="30" id="T2e-a7-fgS"/>
+                            <constraint firstItem="5rp-nf-Ogm" firstAttribute="leading" secondItem="KPt-Ah-lbt" secondAttribute="leading" id="VM0-UF-rJn"/>
+                            <constraint firstAttribute="trailing" secondItem="BF6-j6-aZN" secondAttribute="trailing" constant="20" id="bml-vU-1ib"/>
+                            <constraint firstItem="KPt-Ah-lbt" firstAttribute="top" secondItem="qpC-nh-wiY" secondAttribute="top" id="ckD-ax-EkX"/>
+                            <constraint firstItem="Ja7-dc-yIa" firstAttribute="top" secondItem="tDr-Yf-391" secondAttribute="bottom" constant="10" id="geX-MI-Lc6"/>
+                            <constraint firstItem="pkI-hU-f1C" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="30" id="hvC-RU-j7z"/>
+                            <constraint firstItem="5rp-nf-Ogm" firstAttribute="top" secondItem="tDr-Yf-391" secondAttribute="top" id="soB-ej-oAl"/>
+                            <constraint firstItem="pkI-hU-f1C" firstAttribute="top" secondItem="qpC-nh-wiY" secondAttribute="bottom" constant="10" id="vM5-yB-kUe"/>
+                            <constraint firstItem="b4C-gW-jnG" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="30" id="vcf-lq-YRo"/>
+                            <constraint firstItem="qpC-nh-wiY" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="20" id="weK-Wl-VTg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dev" destination="Ja7-dc-yIa" id="u0O-AX-Ego"/>
+                        <outlet property="name" destination="cuO-Ym-XhS" id="1Yz-It-zkY"/>
+                        <outlet property="togglApiKey" destination="b4C-gW-jnG" id="x7G-Du-NIv"/>
+                        <outlet property="togglUserAgent" destination="pkI-hU-f1C" id="eTe-ak-ve4"/>
+                        <outlet property="togglWorkSpace" destination="xaT-qS-sok" id="NOD-jg-u37"/>
+                    </connections>
+                </viewController>
+                <customObject id="w6a-ZN-x8h" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="192"/>
+        </scene>
+        <!--DairyReport-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController title="DairyReport" id="5gI-5U-AMq" customClass="ViewController" customModule="TodoistConvert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="548"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
+                                <rect key="frame" x="116" y="263" width="248" height="22"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Your document contents here" id="Cc7-nU-5Mv">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnW-jl-r9K">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="480" id="iIS-Nh-MzJ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="ココに日報が出力されます" drawsBackground="YES" id="a6Q-34-E7c">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dO5-2q-uVW">
+                                <rect key="frame" x="231" y="505" width="97" height="27"/>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="bEA-YG-9eR">
+                                    <font key="font" metaFont="system"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="-501235200">
+                                        <!--1985-02-12 16:00:00 +0000-->
+                                    </date>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </datePickerCell>
+                            </datePicker>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a9P-uf-laI">
+                                <rect key="frame" x="359" y="500" width="87" height="32"/>
+                                <buttonCell key="cell" type="push" title="日報 🙆" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OK8-64-5L8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dairyReportButtonDidPush:" target="5gI-5U-AMq" id="51M-d3-Z4X"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHJ-gi-7ae">
+                                <rect key="frame" x="18" y="509" width="102" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Dairy Report" id="Uo7-rQ-sg4">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LnW-jl-r9K" secondAttribute="bottom" id="2zn-DP-XwS"/>
+                            <constraint firstItem="KHJ-gi-7ae" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="20" id="5dh-ho-9nS"/>
+                            <constraint firstItem="LnW-jl-r9K" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="7zk-8Y-Gls"/>
+                            <constraint firstItem="LnW-jl-r9K" firstAttribute="top" secondItem="dO5-2q-uVW" secondAttribute="bottom" constant="25" id="BjO-jL-ZVi"/>
+                            <constraint firstAttribute="trailing" secondItem="a9P-uf-laI" secondAttribute="trailing" constant="40" id="LBT-3S-Zmj"/>
+                            <constraint firstItem="a9P-uf-laI" firstAttribute="leading" secondItem="dO5-2q-uVW" secondAttribute="trailing" constant="40" id="OlE-oX-9dT"/>
                             <constraint firstAttribute="centerY" secondItem="TyV-c9-G0C" secondAttribute="centerY" id="Rxv-Yd-F43"/>
+                            <constraint firstItem="KHJ-gi-7ae" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="Sjn-uK-ttX"/>
                             <constraint firstAttribute="centerX" secondItem="TyV-c9-G0C" secondAttribute="centerX" id="Zn4-Y4-lbg"/>
+                            <constraint firstItem="a9P-uf-laI" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="bo2-QA-ZTN"/>
+                            <constraint firstAttribute="trailing" secondItem="LnW-jl-r9K" secondAttribute="trailing" id="o61-mb-YuC"/>
+                            <constraint firstItem="dO5-2q-uVW" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="wFh-DN-7ns"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="_textField" destination="LnW-jl-r9K" id="FJ1-MT-bcE"/>
+                        <outlet property="togglDate" destination="dO5-2q-uVW" id="l6E-aW-hMT"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="77" y="872"/>
         </scene>
     </scenes>
 </document>
