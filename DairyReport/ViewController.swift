@@ -44,7 +44,7 @@ class ViewController: NSViewController {
     
     @IBAction func dairyReportButtonDidPush(_ sender: NSButton) {
         
-        guard let _ = UserDefaults.standard.string(forKey: UserDefaultKey.togglApiKey.rawValue) else {
+        guard let apiKey = UserDefaults.standard.string(forKey: UserDefaultKey.togglApiKey.rawValue), !apiKey.isEmpty else {
             let alert = NSAlert()
             alert.messageText = "Please set your Toggl API Key 🙇"
             alert.runModal()
