@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		437A2330EAB5DE2BCFC1EF33 /* Pods_DairyReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4185E55F2470D1D9BC445DD /* Pods_DairyReport.framework */; };
+		94DC30EC1EA0A385000BE472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DC30EB1EA0A385000BE472 /* Assets.xcassets */; };
+		94DC30EF1EA0A385000BE472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DC30ED1EA0A385000BE472 /* Main.storyboard */; };
+		C49FF37F1EA246FF00CAB314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC30E51EA0A385000BE472 /* AppDelegate.swift */; };
+		C49FF3801EA2470300CAB314 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC30E91EA0A385000BE472 /* Document.swift */; };
+		C49FF3811EA2470700CAB314 /* DairyReportFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1334E1EA1EB2700F98E95 /* DairyReportFormatter.swift */; };
+		C49FF3821EA2470B00CAB314 /* TogglModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC31081EA0C173000BE472 /* TogglModel.swift */; };
+		C49FF3831EA2470D00CAB314 /* TogglRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC31051EA0A89B000BE472 /* TogglRequest.swift */; };
+		C49FF3841EA2471000CAB314 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1335B1EA2043800F98E95 /* PreferenceViewController.swift */; };
+		C49FF3851EA2471300CAB314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC30E71EA0A385000BE472 /* ViewController.swift */; };
+		C4F133541EA1EC0E00F98E95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F133561EA1EC0E00F98E95 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		57A683F3514B02FAD149DAB2 /* Pods-DairyReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DairyReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-DairyReport/Pods-DairyReport.release.xcconfig"; sourceTree = "<group>"; };
+		6D0F4D03183A977597B148EA /* Pods-TodoistConvert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoistConvert.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoistConvert/Pods-TodoistConvert.release.xcconfig"; sourceTree = "<group>"; };
+		745500D8E9CE538532A1B5D6 /* Pods-TodoistConvertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoistConvertTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoistConvertTests/Pods-TodoistConvertTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8DA3DD34DC71B7E5D00F1632 /* Pods_TodoistConvertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoistConvertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94DC30E21EA0A385000BE472 /* DairyReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DairyReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94DC30E51EA0A385000BE472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94DC30E71EA0A385000BE472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94DC30E91EA0A385000BE472 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		94DC30EB1EA0A385000BE472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94DC30EE1EA0A385000BE472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94DC30F01EA0A385000BE472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DC31051EA0A89B000BE472 /* TogglRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglRequest.swift; sourceTree = "<group>"; };
+		94DC31081EA0C173000BE472 /* TogglModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglModel.swift; sourceTree = "<group>"; };
+		A293CE157A8DFA522B652692 /* Pods_DairyReportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DairyReportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4185E55F2470D1D9BC445DD /* Pods_DairyReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DairyReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4EAC4B4AC5674E91584FFAC /* Pods-DairyReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DairyReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DairyReportTests/Pods-DairyReportTests.release.xcconfig"; sourceTree = "<group>"; };
+		A77B47832C4594954C28DE50 /* Pods-TodoistConvert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoistConvert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoistConvert/Pods-TodoistConvert.debug.xcconfig"; sourceTree = "<group>"; };
+		B96DB0AEBC54AF451338F27A /* Pods-TodoistConvertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoistConvertTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoistConvertTests/Pods-TodoistConvertTests.release.xcconfig"; sourceTree = "<group>"; };
+		BC8A3ABCAA76F5D3D3103F1C /* Pods_TodoistConvert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoistConvert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C49FF3871EA2497600CAB314 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		C49FF3881EA2498E00CAB314 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4F1334E1EA1EB2700F98E95 /* DairyReportFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DairyReportFormatter.swift; sourceTree = "<group>"; };
+		C4F133571EA1EC1700F98E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4F1335B1EA2043800F98E95 /* PreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		C7C1EFA1DA2A036701DE0114 /* Pods-DairyReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DairyReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DairyReport/Pods-DairyReport.debug.xcconfig"; sourceTree = "<group>"; };
+		F7617E9215A5D0C79B0C4BB9 /* Pods-DairyReportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DairyReportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DairyReportTests/Pods-DairyReportTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94DC30DF1EA0A385000BE472 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				437A2330EAB5DE2BCFC1EF33 /* Pods_DairyReport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70F9EAF0BD002EAC60BB83CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A77B47832C4594954C28DE50 /* Pods-TodoistConvert.debug.xcconfig */,
+				6D0F4D03183A977597B148EA /* Pods-TodoistConvert.release.xcconfig */,
+				745500D8E9CE538532A1B5D6 /* Pods-TodoistConvertTests.debug.xcconfig */,
+				B96DB0AEBC54AF451338F27A /* Pods-TodoistConvertTests.release.xcconfig */,
+				C7C1EFA1DA2A036701DE0114 /* Pods-DairyReport.debug.xcconfig */,
+				57A683F3514B02FAD149DAB2 /* Pods-DairyReport.release.xcconfig */,
+				F7617E9215A5D0C79B0C4BB9 /* Pods-DairyReportTests.debug.xcconfig */,
+				A4EAC4B4AC5674E91584FFAC /* Pods-DairyReportTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94DC30D91EA0A385000BE472 = {
+			isa = PBXGroup;
+			children = (
+				94DC30E41EA0A385000BE472 /* DairyReport */,
+				94DC30E31EA0A385000BE472 /* Products */,
+				70F9EAF0BD002EAC60BB83CA /* Pods */,
+				CE8A9F0683F1472DBC0858BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		94DC30E31EA0A385000BE472 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94DC30E21EA0A385000BE472 /* DairyReport.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94DC30E41EA0A385000BE472 /* DairyReport */ = {
+			isa = PBXGroup;
+			children = (
+				94DC30F01EA0A385000BE472 /* Info.plist */,
+				94DC30E51EA0A385000BE472 /* AppDelegate.swift */,
+				94DC30E91EA0A385000BE472 /* Document.swift */,
+				94DC30EB1EA0A385000BE472 /* Assets.xcassets */,
+				94DC30ED1EA0A385000BE472 /* Main.storyboard */,
+				C4F1334D1EA1EB0500F98E95 /* Formatter */,
+				94DC31071EA0C15B000BE472 /* Model */,
+				94DC31041EA0A88A000BE472 /* Request */,
+				C4F133511EA1EBE700F98E95 /* Resource */,
+				C4F1335A1EA203DF00F98E95 /* VIew */,
+			);
+			path = DairyReport;
+			sourceTree = "<group>";
+		};
+		94DC31041EA0A88A000BE472 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				94DC31051EA0A89B000BE472 /* TogglRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		94DC31071EA0C15B000BE472 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94DC31081EA0C173000BE472 /* TogglModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C4F1334D1EA1EB0500F98E95 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				C4F1334E1EA1EB2700F98E95 /* DairyReportFormatter.swift */,
+			);
+			name = Formatter;
+			sourceTree = "<group>";
+		};
+		C4F133511EA1EBE700F98E95 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C4F133561EA1EC0E00F98E95 /* Localizable.strings */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		C4F1335A1EA203DF00F98E95 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				94DC30E71EA0A385000BE472 /* ViewController.swift */,
+				C4F1335B1EA2043800F98E95 /* PreferenceViewController.swift */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
+		CE8A9F0683F1472DBC0858BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC8A3ABCAA76F5D3D3103F1C /* Pods_TodoistConvert.framework */,
+				8DA3DD34DC71B7E5D00F1632 /* Pods_TodoistConvertTests.framework */,
+				A4185E55F2470D1D9BC445DD /* Pods_DairyReport.framework */,
+				A293CE157A8DFA522B652692 /* Pods_DairyReportTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94DC30E11EA0A385000BE472 /* DairyReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94DC30FE1EA0A385000BE472 /* Build configuration list for PBXNativeTarget "DairyReport" */;
+			buildPhases = (
+				CA0C77D347B43985E04AB8C5 /* [CP] Check Pods Manifest.lock */,
+				94DC30DE1EA0A385000BE472 /* Sources */,
+				94DC30DF1EA0A385000BE472 /* Frameworks */,
+				94DC30E01EA0A385000BE472 /* Resources */,
+				E2CE723755AC4D45AC9D424A /* [CP] Embed Pods Frameworks */,
+				ECDA11ADA15E3BD7007990B3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DairyReport;
+			productName = TodoistConvert;
+			productReference = 94DC30E21EA0A385000BE472 /* DairyReport.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94DC30DA1EA0A385000BE472 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "鈴木 耕介";
+				TargetAttributes = {
+					94DC30E11EA0A385000BE472 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = P7Y92B3DEV;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 94DC30DD1EA0A385000BE472 /* Build configuration list for PBXProject "DairyReport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ja,
+			);
+			mainGroup = 94DC30D91EA0A385000BE472;
+			productRefGroup = 94DC30E31EA0A385000BE472 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94DC30E11EA0A385000BE472 /* DairyReport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94DC30E01EA0A385000BE472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DC30EC1EA0A385000BE472 /* Assets.xcassets in Resources */,
+				C4F133541EA1EC0E00F98E95 /* Localizable.strings in Resources */,
+				94DC30EF1EA0A385000BE472 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA0C77D347B43985E04AB8C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2CE723755AC4D45AC9D424A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DairyReport/Pods-DairyReport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECDA11ADA15E3BD7007990B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DairyReport/Pods-DairyReport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94DC30DE1EA0A385000BE472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C49FF3851EA2471300CAB314 /* ViewController.swift in Sources */,
+				C49FF3841EA2471000CAB314 /* PreferenceViewController.swift in Sources */,
+				C49FF3831EA2470D00CAB314 /* TogglRequest.swift in Sources */,
+				C49FF3821EA2470B00CAB314 /* TogglModel.swift in Sources */,
+				C49FF3811EA2470700CAB314 /* DairyReportFormatter.swift in Sources */,
+				C49FF3801EA2470300CAB314 /* Document.swift in Sources */,
+				C49FF37F1EA246FF00CAB314 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94DC30ED1EA0A385000BE472 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94DC30EE1EA0A385000BE472 /* Base */,
+				C49FF3871EA2497600CAB314 /* ja */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4F133561EA1EC0E00F98E95 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4F133571EA1EC1700F98E95 /* Base */,
+				C49FF3881EA2498E00CAB314 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94DC30FC1EA0A385000BE472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94DC30FD1EA0A385000BE472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		94DC30FF1EA0A385000BE472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C1EFA1DA2A036701DE0114 /* Pods-DairyReport.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P7Y92B3DEV;
+				INFOPLIST_FILE = "$(SRCROOT)/DairyReport/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DairyReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		94DC31001EA0A385000BE472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57A683F3514B02FAD149DAB2 /* Pods-DairyReport.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P7Y92B3DEV;
+				INFOPLIST_FILE = "$(SRCROOT)/DairyReport/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DairyReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94DC30DD1EA0A385000BE472 /* Build configuration list for PBXProject "DairyReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DC30FC1EA0A385000BE472 /* Debug */,
+				94DC30FD1EA0A385000BE472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94DC30FE1EA0A385000BE472 /* Build configuration list for PBXNativeTarget "DairyReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DC30FF1EA0A385000BE472 /* Debug */,
+				94DC31001EA0A385000BE472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94DC30DA1EA0A385000BE472 /* Project object */;
+}
