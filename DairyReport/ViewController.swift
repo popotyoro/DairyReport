@@ -54,5 +54,7 @@ class ViewController: NSViewController {
         TogglRequest.requestTogglReport(date: togglDate.dateValue, completionHandler: refreshTextFiled(togglData:))
     }
 
+    @IBAction func postSlackButttonDidPush(_ sender: Any) {
+    }
 }
 

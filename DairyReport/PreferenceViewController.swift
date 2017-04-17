@@ -14,6 +14,8 @@ enum UserDefaultKey: String {
     case togglWorkSpace = "togglWorkSpace"
     case dev = "dev"
     case name = "name"
+    case slackApiKey = "slackApiKey"
+    case slackChannel = "slackChannel"
 }
 
 class PreferenceViewController: NSViewController {
@@ -21,8 +23,12 @@ class PreferenceViewController: NSViewController {
     @IBOutlet weak var togglApiKey: NSTextField!
     @IBOutlet weak var togglUserAgent: NSTextField!
     @IBOutlet weak var togglWorkSpace: NSTextField!
+    
     @IBOutlet weak var dev: NSTextField!
     @IBOutlet weak var name: NSTextField!
+    
+    @IBOutlet weak var slackApiKey: NSTextField!
+    @IBOutlet weak var slackChannel: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +47,8 @@ class PreferenceViewController: NSViewController {
         togglWorkSpace.stringValue = userdefaults.string(forKey: UserDefaultKey.togglWorkSpace.rawValue) ?? ""
         dev.stringValue = userdefaults.string(forKey: UserDefaultKey.dev.rawValue) ?? ""
         name.stringValue = userdefaults.string(forKey: UserDefaultKey.name.rawValue) ?? ""
+        slackApiKey.stringValue = userdefaults.string(forKey: UserDefaultKey.slackApiKey.rawValue) ?? ""
+        slackChannel.stringValue = userdefaults.string(forKey: UserDefaultKey.slackChannel.rawValue) ?? ""
         
         
     }
@@ -52,6 +60,8 @@ class PreferenceViewController: NSViewController {
         userdefaluts.set(togglWorkSpace.stringValue, forKey: UserDefaultKey.togglWorkSpace.rawValue)
         userdefaluts.set(dev.stringValue, forKey: UserDefaultKey.dev.rawValue)
         userdefaluts.set(name.stringValue, forKey: UserDefaultKey.name.rawValue)
+        userdefaluts.set(slackApiKey.stringValue, forKey: UserDefaultKey.slackApiKey.rawValue)
+        userdefaluts.set(slackChannel.stringValue, forKey: UserDefaultKey.slackChannel.rawValue)
         userdefaluts.synchronize()
     }
 
