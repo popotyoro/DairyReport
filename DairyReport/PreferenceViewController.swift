@@ -57,5 +57,6 @@ class PreferenceViewController: NSViewController {
 
     @IBAction func saveButtonDidPush(_ sender: NSButton) {
         savePreferences()
+        self.dismissViewController(self)
     }
 }
