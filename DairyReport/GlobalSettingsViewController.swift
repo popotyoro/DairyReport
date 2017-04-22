@@ -8,14 +8,6 @@
 
 import Cocoa
 
-enum UserDefaultKey: String {
-    case togglApiKey = "togglApiKey"
-    case togglUserAgent = "togglUserAgent"
-    case togglWorkSpace = "togglWorkSpace"
-    case dev = "dev"
-    case name = "name"
-}
-
 class GlobalSettingsViewController: NSViewController {
 
     @IBOutlet weak var togglApiKey: NSTextField!
@@ -35,24 +27,25 @@ class GlobalSettingsViewController: NSViewController {
     
     private func loadPreferences() {
         
-        let userdefaults = UserDefaults.standard
-        togglApiKey.stringValue = userdefaults.string(forKey: UserDefaultKey.togglApiKey.rawValue) ?? ""
-        togglUserAgent.stringValue = userdefaults.string(forKey: UserDefaultKey.togglUserAgent.rawValue) ?? ""
-        togglWorkSpace.stringValue = userdefaults.string(forKey: UserDefaultKey.togglWorkSpace.rawValue) ?? ""
-        dev.stringValue = userdefaults.string(forKey: UserDefaultKey.dev.rawValue) ?? ""
-        name.stringValue = userdefaults.string(forKey: UserDefaultKey.name.rawValue) ?? ""
-        
-        
+        let userDefalutManager = UserdefaultsManager()
+        togglApiKey.stringValue = userDefalutManager.togglApiLey ?? ""
+        togglUserAgent.stringValue = userDefalutManager.togglUserAgent ?? ""
+        togglWorkSpace.stringValue = userDefalutManager.togglWorkSpace ?? ""
+        dev.stringValue = userDefalutManager.dev ?? ""
+        name.stringValue = userDefalutManager.name ?? ""
     }
     
     private func savePreferences() {
-        let userdefaluts = UserDefaults.standard
-        userdefaluts.set(togglApiKey.stringValue, forKey: UserDefaultKey.togglApiKey.rawValue)
-        userdefaluts.set(togglUserAgent.stringValue, forKey: UserDefaultKey.togglUserAgent.rawValue)
-        userdefaluts.set(togglWorkSpace.stringValue, forKey: UserDefaultKey.togglWorkSpace.rawValue)
-        userdefaluts.set(dev.stringValue, forKey: UserDefaultKey.dev.rawValue)
-        userdefaluts.set(name.stringValue, forKey: UserDefaultKey.name.rawValue)
-        userdefaluts.synchronize()
+        
+        var userDefalutsManager = UserdefaultsManager()
+        
+        userDefalutsManager.togglApiLey = togglApiKey.stringValue
+        userDefalutsManager.togglUserAgent = togglUserAgent.stringValue
+        userDefalutsManager.togglWorkSpace = togglWorkSpace.stringValue
+        userDefalutsManager.dev = dev.stringValue
+        userDefalutsManager.name = name.stringValue
+        
+        userDefalutsManager.syncUserdefaults()
     }
 
     @IBAction func saveButtonDidPush(_ sender: NSButton) {

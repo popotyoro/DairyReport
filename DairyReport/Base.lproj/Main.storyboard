@@ -708,7 +708,7 @@
         <!--Template-->
         <scene sceneID="aYW-x7-Wad">
             <objects>
-                <viewController title="Template" id="S01-OG-EJj" sceneMemberID="viewController">
+                <viewController title="Template" id="S01-OG-EJj" customClass="ChangeModeViewController" customModule="DairyReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Hi0-sq-Tf3">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -771,6 +771,12 @@
                             <constraint firstAttribute="trailing" secondItem="7Y4-n9-Qct" secondAttribute="trailing" constant="100" id="uzf-Js-Dsq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="demoTextView" destination="mSE-do-Qzb" id="pvP-cA-Fz6"/>
+                        <outlet property="demoView" destination="jgb-yX-uD6" id="o2z-Ki-iD7"/>
+                        <outlet property="mailModeButton" destination="Cx2-3i-my0" id="N01-Qy-Nxy"/>
+                        <outlet property="slackModeButton" destination="7Y4-n9-Qct" id="mPf-WH-yZu"/>
+                    </connections>
                 </viewController>
                 <customObject id="QUS-jk-shX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,8 @@
 		C49FF3831EA2470D00CAB314 /* TogglRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC31051EA0A89B000BE472 /* TogglRequest.swift */; };
 		C49FF3841EA2471000CAB314 /* GlobalSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1335B1EA2043800F98E95 /* GlobalSettingsViewController.swift */; };
 		C49FF3851EA2471300CAB314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC30E71EA0A385000BE472 /* ViewController.swift */; };
+		C4BB1A2E1EAB769600F93183 /* ChangeModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB1A2D1EAB769600F93183 /* ChangeModeViewController.swift */; };
+		C4BB1A351EAB79B700F93183 /* UserdefalutsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB1A341EAB79B700F93183 /* UserdefalutsManager.swift */; };
 		C4F133541EA1EC0E00F98E95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F133561EA1EC0E00F98E95 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		BC8A3ABCAA76F5D3D3103F1C /* Pods_TodoistConvert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoistConvert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49FF3871EA2497600CAB314 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		C49FF3881EA2498E00CAB314 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4BB1A2D1EAB769600F93183 /* ChangeModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeModeViewController.swift; sourceTree = "<group>"; };
+		C4BB1A341EAB79B700F93183 /* UserdefalutsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserdefalutsManager.swift; sourceTree = "<group>"; };
 		C4F1334E1EA1EB2700F98E95 /* DairyReportFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DairyReportFormatter.swift; sourceTree = "<group>"; };
 		C4F133571EA1EC1700F98E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4F1335B1EA2043800F98E95 /* GlobalSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettingsViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +101,6 @@
 		94DC30E41EA0A385000BE472 /* DairyReport */ = {
 			isa = PBXGroup;
 			children = (
-				C4BB1A271EAB695700F93183 /* Storyboard */,
 				94DC30F01EA0A385000BE472 /* Info.plist */,
 				94DC30E51EA0A385000BE472 /* AppDelegate.swift */,
 				94DC30E91EA0A385000BE472 /* Document.swift */,
@@ -106,6 +109,8 @@
 				94DC31071EA0C15B000BE472 /* Model */,
 				94DC31041EA0A88A000BE472 /* Request */,
 				C4F133511EA1EBE700F98E95 /* Resource */,
+				C4BB1A271EAB695700F93183 /* Storyboard */,
+				C4BB1A331EAB799F00F93183 /* Userdefaluts */,
 				C4F1335A1EA203DF00F98E95 /* VIew */,
 			);
 			path = DairyReport;
@@ -139,8 +144,17 @@
 			isa = PBXGroup;
 			children = (
 				C4F1335B1EA2043800F98E95 /* GlobalSettingsViewController.swift */,
+				C4BB1A2D1EAB769600F93183 /* ChangeModeViewController.swift */,
 			);
 			name = Preferences;
+			sourceTree = "<group>";
+		};
+		C4BB1A331EAB799F00F93183 /* Userdefaluts */ = {
+			isa = PBXGroup;
+			children = (
+				C4BB1A341EAB79B700F93183 /* UserdefalutsManager.swift */,
+			);
+			name = Userdefaluts;
 			sourceTree = "<group>";
 		};
 		C4F1334D1EA1EB0500F98E95 /* Formatter */ = {
@@ -306,10 +320,12 @@
 				C49FF3851EA2471300CAB314 /* ViewController.swift in Sources */,
 				C49FF3841EA2471000CAB314 /* GlobalSettingsViewController.swift in Sources */,
 				C49FF3831EA2470D00CAB314 /* TogglRequest.swift in Sources */,
+				C4BB1A2E1EAB769600F93183 /* ChangeModeViewController.swift in Sources */,
 				C49FF3821EA2470B00CAB314 /* TogglModel.swift in Sources */,
 				C49FF3811EA2470700CAB314 /* DairyReportFormatter.swift in Sources */,
 				C49FF3801EA2470300CAB314 /* Document.swift in Sources */,
 				C49FF37F1EA246FF00CAB314 /* AppDelegate.swift in Sources */,
+				C4BB1A351EAB79B700F93183 /* UserdefalutsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
