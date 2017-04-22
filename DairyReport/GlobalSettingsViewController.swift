@@ -16,7 +16,7 @@ enum UserDefaultKey: String {
     case name = "name"
 }
 
-class PreferenceViewController: NSViewController {
+class GlobalSettingsViewController: NSViewController {
 
     @IBOutlet weak var togglApiKey: NSTextField!
     @IBOutlet weak var togglUserAgent: NSTextField!

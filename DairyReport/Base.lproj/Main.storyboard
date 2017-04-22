@@ -25,7 +25,7 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
-                                                <segue destination="aFK-ni-Giw" kind="show" id="iWF-aX-RRa"/>
+                                                <segue destination="rb5-Ke-Dq6" kind="modal" id="XMY-OV-thw"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -682,10 +682,104 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--設定-->
+        <!--Tab View Controller-->
+        <scene sceneID="SHf-Cd-j6G">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="rb5-Ke-Dq6" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="x6m-T2-ihe"/>
+                        <tabViewItem identifier="" id="Eq3-VA-Chh"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="uq4-aW-fFL">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="aFK-ni-Giw" kind="relationship" relationship="tabItems" id="7Ru-Za-h4x"/>
+                        <segue destination="S01-OG-EJj" kind="relationship" relationship="tabItems" id="0qu-cg-VWN"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="Ain-Mf-AzP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="250"/>
+        </scene>
+        <!--Template-->
+        <scene sceneID="aYW-x7-Wad">
+            <objects>
+                <viewController title="Template" id="S01-OG-EJj" sceneMemberID="viewController">
+                    <view key="view" id="Hi0-sq-Tf3">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Cx2-3i-my0">
+                                <rect key="frame" x="99" y="253" width="47" height="18"/>
+                                <buttonCell key="cell" type="radio" title="Mail" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Z77-UF-F37">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="mZE-ae-2dc">
+                                <rect key="frame" x="0.0" y="221" width="450" height="5"/>
+                            </box>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="7Y4-n9-Qct">
+                                <rect key="frame" x="297" y="253" width="55" height="18"/>
+                                <buttonCell key="cell" type="radio" title="Slack" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Nq7-eL-xN5">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-yX-uD6">
+                                <rect key="frame" x="30" y="30" width="390" height="163"/>
+                                <clipView key="contentView" id="JLK-nD-840">
+                                    <rect key="frame" x="1" y="1" width="388" height="161"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="mSE-do-Qzb">
+                                            <rect key="frame" x="0.0" y="-0.5" width="388" height="161"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="388" height="161"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="SHG-WO-dKb">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="oyt-Lt-jWw">
+                                    <rect key="frame" x="373" y="1" width="16" height="161"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jgb-yX-uD6" secondAttribute="trailing" constant="30" id="BXK-lM-xOI"/>
+                            <constraint firstAttribute="trailing" secondItem="mZE-ae-2dc" secondAttribute="trailing" id="Sbn-xA-wpM"/>
+                            <constraint firstItem="mZE-ae-2dc" firstAttribute="top" secondItem="7Y4-n9-Qct" secondAttribute="bottom" constant="30" id="WEF-dd-Ybr"/>
+                            <constraint firstItem="mZE-ae-2dc" firstAttribute="leading" secondItem="Hi0-sq-Tf3" secondAttribute="leading" id="cqU-kJ-ZIz"/>
+                            <constraint firstItem="Cx2-3i-my0" firstAttribute="top" secondItem="Hi0-sq-Tf3" secondAttribute="top" constant="30" id="fQT-S9-fU8"/>
+                            <constraint firstItem="jgb-yX-uD6" firstAttribute="leading" secondItem="Hi0-sq-Tf3" secondAttribute="leading" constant="30" id="gg9-le-QkR"/>
+                            <constraint firstAttribute="bottom" secondItem="jgb-yX-uD6" secondAttribute="bottom" constant="30" id="hW6-Uz-XxQ"/>
+                            <constraint firstItem="7Y4-n9-Qct" firstAttribute="top" secondItem="Hi0-sq-Tf3" secondAttribute="top" constant="30" id="iRo-CS-IZp"/>
+                            <constraint firstItem="jgb-yX-uD6" firstAttribute="top" secondItem="mZE-ae-2dc" secondAttribute="bottom" constant="30" id="oYO-Yd-G5Z"/>
+                            <constraint firstItem="Cx2-3i-my0" firstAttribute="leading" secondItem="Hi0-sq-Tf3" secondAttribute="leading" constant="100" id="sKQ-jV-I6n"/>
+                            <constraint firstAttribute="trailing" secondItem="7Y4-n9-Qct" secondAttribute="trailing" constant="100" id="uzf-Js-Dsq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="QUS-jk-shX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397" y="286"/>
+        </scene>
+        <!--General-->
         <scene sceneID="CPU-kJ-O2M">
             <objects>
-                <viewController title="設定" id="aFK-ni-Giw" customClass="PreferenceViewController" customModule="DairyReport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="General" id="aFK-ni-Giw" customClass="GlobalSettingsViewController" customModule="DairyReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="rX2-8b-9Wz">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -795,10 +889,14 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="dXy-dC-ohW">
+                                <rect key="frame" x="0.0" y="154" width="450" height="5"/>
+                            </box>
                         </subviews>
                         <constraints>
                             <constraint firstItem="xaT-qS-sok" firstAttribute="top" secondItem="pkI-hU-f1C" secondAttribute="top" id="1Ao-sS-DkC"/>
                             <constraint firstItem="tDr-Yf-391" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="20" id="B10-ib-kmN"/>
+                            <constraint firstAttribute="trailing" secondItem="dXy-dC-ohW" secondAttribute="trailing" id="FPk-FF-BLp"/>
                             <constraint firstItem="b4C-gW-jnG" firstAttribute="top" secondItem="xpe-Co-i4b" secondAttribute="bottom" constant="10" id="Fo9-FQ-ANY"/>
                             <constraint firstItem="cuO-Ym-XhS" firstAttribute="top" secondItem="Ja7-dc-yIa" secondAttribute="top" id="HDk-T9-hqH"/>
                             <constraint firstItem="BF6-j6-aZN" firstAttribute="top" secondItem="cuO-Ym-XhS" secondAttribute="bottom" constant="30" id="HP3-md-n4k"/>
@@ -806,6 +904,7 @@
                             <constraint firstItem="tDr-Yf-391" firstAttribute="top" secondItem="pkI-hU-f1C" secondAttribute="bottom" constant="30" id="Mts-nr-xIs"/>
                             <constraint firstItem="xpe-Co-i4b" firstAttribute="top" secondItem="rX2-8b-9Wz" secondAttribute="top" constant="20" id="OXa-qy-s6u"/>
                             <constraint firstItem="xpe-Co-i4b" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="20" id="P39-St-1YI"/>
+                            <constraint firstItem="dXy-dC-ohW" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" id="PmD-B7-ika"/>
                             <constraint firstItem="xaT-qS-sok" firstAttribute="leading" secondItem="KPt-Ah-lbt" secondAttribute="leading" constant="10" id="R0w-fj-uHf"/>
                             <constraint firstItem="KPt-Ah-lbt" firstAttribute="leading" secondItem="qpC-nh-wiY" secondAttribute="trailing" constant="120" id="RI7-BS-nK0"/>
                             <constraint firstItem="qpC-nh-wiY" firstAttribute="top" secondItem="b4C-gW-jnG" secondAttribute="bottom" constant="10" id="Sxa-DT-JEI"/>
@@ -813,6 +912,7 @@
                             <constraint firstItem="5rp-nf-Ogm" firstAttribute="leading" secondItem="KPt-Ah-lbt" secondAttribute="leading" id="VM0-UF-rJn"/>
                             <constraint firstAttribute="trailing" secondItem="BF6-j6-aZN" secondAttribute="trailing" constant="20" id="bml-vU-1ib"/>
                             <constraint firstItem="KPt-Ah-lbt" firstAttribute="top" secondItem="qpC-nh-wiY" secondAttribute="top" id="ckD-ax-EkX"/>
+                            <constraint firstItem="dXy-dC-ohW" firstAttribute="top" secondItem="xaT-qS-sok" secondAttribute="bottom" constant="15" id="dqa-6X-ROt"/>
                             <constraint firstItem="Ja7-dc-yIa" firstAttribute="top" secondItem="tDr-Yf-391" secondAttribute="bottom" constant="10" id="geX-MI-Lc6"/>
                             <constraint firstItem="pkI-hU-f1C" firstAttribute="leading" secondItem="rX2-8b-9Wz" secondAttribute="leading" constant="30" id="hvC-RU-j7z"/>
                             <constraint firstItem="5rp-nf-Ogm" firstAttribute="top" secondItem="tDr-Yf-391" secondAttribute="top" id="soB-ej-oAl"/>
@@ -831,7 +931,7 @@
                 </viewController>
                 <customObject id="w6a-ZN-x8h" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="192"/>
+            <point key="canvasLocation" x="1397" y="-139"/>
         </scene>
         <!--DairyReport-->
         <scene sceneID="hIz-AP-VOD">

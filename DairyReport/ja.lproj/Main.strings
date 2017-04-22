@@ -272,8 +272,8 @@
 /* Class = "NSTextFieldCell"; placeholderString = "ココに日報が出力されます"; ObjectID = "a6Q-34-E7c"; */
 "a6Q-34-E7c.placeholderString" = "ココに日報が出力されます";
 
-/* Class = "NSViewController"; title = "設定"; ObjectID = "aFK-ni-Giw"; */
-"aFK-ni-Giw.title" = "設定";
+/* Class = "NSViewController"; title = "General"; ObjectID = "aFK-ni-Giw"; */
+"aFK-ni-Giw.title" = "General";
 
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
 "aTl-1u-JFS.title" = "Print…";
