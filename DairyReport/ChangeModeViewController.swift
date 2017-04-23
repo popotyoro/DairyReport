@@ -20,7 +20,10 @@ class ChangeModeViewController: NSViewController {
         + String(format: NSLocalizedString("Body_Detail", comment: ""), "Title", "Subject") + "\n"
         + NSLocalizedString("Body_Impression", comment: "") + "\n"
         + NSLocalizedString("Fotter", comment: "")
-
+    
+    private let demoOutputTextSlack = String(format: NSLocalizedString("Body_Project", comment: ""), "Project名") + "\n"
+        + String(format: NSLocalizedString("Body_Detail", comment: ""), "Title", "Subject") + "\n"
+        + NSLocalizedString("Body_Impression", comment: "") + "\n"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +65,7 @@ class ChangeModeViewController: NSViewController {
         if mailModeButton.state == 1 {
             demoTextView.string = demoOutputTextMail
         } else {
-            demoTextView.string = ""
+            demoTextView.string = demoOutputTextSlack
         }
     }
     
@@ -79,7 +82,6 @@ class ChangeModeViewController: NSViewController {
         setUpDemoTextView()
         
     }
-    
     
     @IBAction func slackModeButtonDidPush(_ sender: NSButton) {
         mailModeButton.state = 0
