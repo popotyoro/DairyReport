@@ -14,6 +14,12 @@ enum UserDefaultKey: String {
     case togglWorkSpace = "togglWorkSpace"
     case dev = "dev"
     case name = "name"
+    case outputMode = "outputMode"
+}
+
+enum OutputModeType: String {
+    case mail = "mail"
+    case slack =  "slack"
 }
 
 struct UserdefaultsManager {
@@ -62,6 +68,15 @@ struct UserdefaultsManager {
         }
         set {
             userdefaults.set(newValue, forKey: UserDefaultKey.name.rawValue)
+        }
+    }
+    
+    var outputMode: String? {
+        get {
+            return userdefaults.string(forKey: UserDefaultKey.outputMode.rawValue)
+        }
+        set {
+            userdefaults.set(newValue, forKey: UserDefaultKey.outputMode.rawValue)
         }
     }
     

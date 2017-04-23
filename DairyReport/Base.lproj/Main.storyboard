@@ -719,6 +719,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="mailModeButtonDidPush:" target="S01-OG-EJj" id="cZW-q0-Lpk"/>
+                                </connections>
                             </button>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="mZE-ae-2dc">
                                 <rect key="frame" x="0.0" y="221" width="450" height="5"/>
@@ -729,6 +732,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="slackModeButtonDidPush:" target="S01-OG-EJj" id="PwT-tE-t4D"/>
+                                </connections>
                             </button>
                             <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-yX-uD6">
                                 <rect key="frame" x="30" y="30" width="390" height="163"/>
