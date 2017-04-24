@@ -32,6 +32,14 @@ class ViewController: NSViewController {
     }
     
     func refreshTextFiled(togglData: [TogglModel]) {
+        
+        let userdefaultsManager = UserdefaultsManager()
+        
+        _textField.stringValue = userdefaultsManager.outputMode == OutputModeType.mail.rawValue ? mailTypeText(togglData: togglData) : slackTypeText(togglData: togglData)
+    }
+    
+    private func mailTypeText(togglData: [TogglModel]) -> String {
+        
         let header = DairyReportFormtter.convertHeader(dev: (UserDefaults.standard.string(forKey: UserDefaultKey.dev.rawValue) ?? ""),
                                                        name: (UserDefaults.standard.string(forKey: UserDefaultKey.name.rawValue) ?? "")) + "\n\n"
         
@@ -39,7 +47,12 @@ class ViewController: NSViewController {
         
         let fotter = NSLocalizedString("Fotter", comment: "")
         
-        _textField.stringValue = header + body + fotter
+        return header + body + fotter
+        
+    }
+    
+    private func slackTypeText(togglData: [TogglModel]) -> String {
+        return DairyReportFormtter.convertBody(fromModels: togglData)
     }
     
     @IBAction func dairyReportButtonDidPush(_ sender: NSButton) {
