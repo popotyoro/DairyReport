@@ -3,7 +3,7 @@
 //  DairyReport
 //
 //  Created by popota on 2017/04/22.
-//  Copyright © 2017年 鈴木 耕介. All rights reserved.
+//  Copyright © 2017年 popota. All rights reserved.
 //
 
 import Cocoa
