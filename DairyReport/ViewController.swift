@@ -12,6 +12,7 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var togglDate: NSDatePicker!
     @IBOutlet weak var _textField: NSTextField!
+    @IBOutlet weak var outputType: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,14 @@ class ViewController: NSViewController {
         }
 
         TogglRequest.requestTogglReport(date: togglDate.dateValue, completionHandler: refreshTextFiled(togglData:))
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        if let outputMode = UserdefaultsManager().outputMode {
+            outputType.stringValue = outputMode + "mode"
+        }
     }
 
     override var representedObject: Any? {
