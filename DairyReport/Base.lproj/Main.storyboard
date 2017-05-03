@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1031,6 +1031,14 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xad-yU-kEc">
+                                <rect key="frame" x="33" y="484" width="73" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="outputType" id="Cb8-w0-fpr">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="LnW-jl-r9K" secondAttribute="bottom" id="2zn-DP-XwS"/>
@@ -1043,12 +1051,15 @@
                             <constraint firstItem="KHJ-gi-7ae" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="Sjn-uK-ttX"/>
                             <constraint firstAttribute="centerX" secondItem="TyV-c9-G0C" secondAttribute="centerX" id="Zn4-Y4-lbg"/>
                             <constraint firstItem="a9P-uf-laI" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="bo2-QA-ZTN"/>
+                            <constraint firstItem="Xad-yU-kEc" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="35" id="dXo-s4-vV8"/>
                             <constraint firstAttribute="trailing" secondItem="LnW-jl-r9K" secondAttribute="trailing" id="o61-mb-YuC"/>
                             <constraint firstItem="dO5-2q-uVW" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="wFh-DN-7ns"/>
+                            <constraint firstItem="Xad-yU-kEc" firstAttribute="top" secondItem="KHJ-gi-7ae" secondAttribute="bottom" constant="8" id="xpl-jU-mP6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="_textField" destination="LnW-jl-r9K" id="FJ1-MT-bcE"/>
+                        <outlet property="outputType" destination="Xad-yU-kEc" id="LXL-yN-BBE"/>
                         <outlet property="togglDate" destination="dO5-2q-uVW" id="l6E-aW-hMT"/>
                     </connections>
                 </viewController>
