@@ -17,6 +17,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange(_:)), name: UserDefaults.didChangeNotification, object: nil)
+        
         togglDate.dateValue = Date()
         
         guard let apiKey = UserDefaults.standard.string(forKey: UserDefaultKey.togglApiKey.rawValue), !apiKey.isEmpty else {
@@ -33,11 +35,15 @@ class ViewController: NSViewController {
             outputType.stringValue = outputMode + "mode"
         }
     }
-
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UserDefaults.didChangeNotification, object: nil)
     }
     
     func refreshTextFiled(togglData: [TogglModel]) {
@@ -64,6 +70,7 @@ class ViewController: NSViewController {
         return DairyReportFormtter.convertBody(fromModels: togglData)
     }
     
+    // MARK: IBAction - UIButton Event
     @IBAction func dairyReportButtonDidPush(_ sender: NSButton) {
         
         guard let apiKey = UserDefaults.standard.string(forKey: UserDefaultKey.togglApiKey.rawValue), !apiKey.isEmpty else {
@@ -74,6 +81,13 @@ class ViewController: NSViewController {
         }
         
         TogglRequest.requestTogglReport(date: togglDate.dateValue, completionHandler: refreshTextFiled(togglData:))
+    }
+    
+    // MARK: NotificationCenter - Userdefaluts
+    func userDefaultsDidChange(_ notification: Notification) {
+        if let outputMode = UserdefaultsManager().outputMode {
+            outputType.stringValue = outputMode + "mode"
+        }
     }
 
 }
