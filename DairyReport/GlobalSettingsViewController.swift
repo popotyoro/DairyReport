@@ -16,12 +16,21 @@ class GlobalSettingsViewController: NSViewController {
     @IBOutlet weak var dev: NSTextField!
     @IBOutlet weak var name: NSTextField!
     
+    var window: NSWindow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
         
         loadPreferences()
         
+    }
+    
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        window = self.view.window
     }
     
     
@@ -50,6 +59,7 @@ class GlobalSettingsViewController: NSViewController {
 
     @IBAction func saveButtonDidPush(_ sender: NSButton) {
         savePreferences()
-//        self.dismissViewController(self)
+        window?.performClose(nil)
+
     }
 }
