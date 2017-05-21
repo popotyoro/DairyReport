@@ -35,6 +35,22 @@ struct DairyReportFormtter {
     }
     
     
+    /// 日報のメール件名を返す
+    ///
+    /// - Parameters:
+    ///   - devName: 所属部所
+    ///   - userName: UserName
+    ///   - date: date
+    /// - Returns: mailSubject
+    static func convertMailSubject(from devName: String, userName: String, date: Date = Date()) -> String {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M月dd日"
+        
+        return String(format: NSLocalizedString("MailSubject", comment: ""), formatter.string(from: date), devName, userName)
+    }
+    
+    
     /// 日報のヘッダーを返す
     ///
     /// - Parameters:
