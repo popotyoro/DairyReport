@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
@@ -979,11 +979,11 @@
             <objects>
                 <viewController title="DairyReport" id="5gI-5U-AMq" customClass="ViewController" customModule="DairyReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="566"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
-                                <rect key="frame" x="116" y="263" width="248" height="22"/>
+                                <rect key="frame" x="116" y="272" width="248" height="22"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Your document contents here" id="Cc7-nU-5Mv">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -991,9 +991,9 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnW-jl-r9K">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                                <rect key="frame" x="10" y="10" width="460" height="440"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="480" id="iIS-Nh-MzJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="440" id="iIS-Nh-MzJ"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="ココに日報が出力されます" drawsBackground="YES" id="a6Q-34-E7c">
                                     <font key="font" metaFont="system"/>
@@ -1002,7 +1002,7 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dO5-2q-uVW">
-                                <rect key="frame" x="231" y="505" width="97" height="27"/>
+                                <rect key="frame" x="231" y="523" width="97" height="27"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="bEA-YG-9eR">
                                     <font key="font" metaFont="system"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-501235200">
@@ -1013,7 +1013,7 @@
                                 </datePickerCell>
                             </datePicker>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a9P-uf-laI">
-                                <rect key="frame" x="359" y="500" width="87" height="32"/>
+                                <rect key="frame" x="359" y="518" width="87" height="32"/>
                                 <buttonCell key="cell" type="push" title="日報 🙆" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OK8-64-5L8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1023,7 +1023,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHJ-gi-7ae">
-                                <rect key="frame" x="18" y="509" width="102" height="19"/>
+                                <rect key="frame" x="18" y="527" width="102" height="19"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Dairy Report" id="Uo7-rQ-sg4">
                                     <font key="font" metaFont="systemBold" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1031,40 +1031,55 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xad-yU-kEc">
-                                <rect key="frame" x="33" y="484" width="73" height="17"/>
+                                <rect key="frame" x="33" y="502" width="73" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="outputType" id="Cb8-w0-fpr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2m-Jt-0sE">
+                                <rect key="frame" x="10" y="465" width="460" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="件名" drawsBackground="YES" id="yH2-0F-biI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="LnW-jl-r9K" secondAttribute="bottom" id="2zn-DP-XwS"/>
+                            <constraint firstItem="LnW-jl-r9K" firstAttribute="top" secondItem="Xad-yU-kEc" secondAttribute="bottom" priority="250" constant="10" id="0HF-ll-JGI"/>
+                            <constraint firstAttribute="bottom" secondItem="LnW-jl-r9K" secondAttribute="bottom" constant="10" id="2zn-DP-XwS"/>
+                            <constraint firstItem="LnW-jl-r9K" firstAttribute="top" secondItem="Z2m-Jt-0sE" secondAttribute="bottom" priority="750" constant="15" id="4hU-bM-C18"/>
                             <constraint firstItem="KHJ-gi-7ae" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="20" id="5dh-ho-9nS"/>
-                            <constraint firstItem="LnW-jl-r9K" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="7zk-8Y-Gls"/>
-                            <constraint firstItem="LnW-jl-r9K" firstAttribute="top" secondItem="dO5-2q-uVW" secondAttribute="bottom" constant="25" id="BjO-jL-ZVi"/>
+                            <constraint firstItem="LnW-jl-r9K" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="10" id="7zk-8Y-Gls"/>
                             <constraint firstAttribute="trailing" secondItem="a9P-uf-laI" secondAttribute="trailing" constant="40" id="LBT-3S-Zmj"/>
                             <constraint firstItem="a9P-uf-laI" firstAttribute="leading" secondItem="dO5-2q-uVW" secondAttribute="trailing" constant="40" id="OlE-oX-9dT"/>
                             <constraint firstAttribute="centerY" secondItem="TyV-c9-G0C" secondAttribute="centerY" id="Rxv-Yd-F43"/>
                             <constraint firstItem="KHJ-gi-7ae" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="Sjn-uK-ttX"/>
+                            <constraint firstItem="Z2m-Jt-0sE" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="10" id="Xja-Wt-4kv"/>
                             <constraint firstAttribute="centerX" secondItem="TyV-c9-G0C" secondAttribute="centerX" id="Zn4-Y4-lbg"/>
                             <constraint firstItem="a9P-uf-laI" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="bo2-QA-ZTN"/>
                             <constraint firstItem="Xad-yU-kEc" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="35" id="dXo-s4-vV8"/>
-                            <constraint firstAttribute="trailing" secondItem="LnW-jl-r9K" secondAttribute="trailing" id="o61-mb-YuC"/>
+                            <constraint firstAttribute="trailing" secondItem="Z2m-Jt-0sE" secondAttribute="trailing" constant="10" id="hNT-L3-sU6"/>
+                            <constraint firstAttribute="trailing" secondItem="LnW-jl-r9K" secondAttribute="trailing" constant="10" id="o61-mb-YuC"/>
                             <constraint firstItem="dO5-2q-uVW" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" id="wFh-DN-7ns"/>
                             <constraint firstItem="Xad-yU-kEc" firstAttribute="top" secondItem="KHJ-gi-7ae" secondAttribute="bottom" constant="8" id="xpl-jU-mP6"/>
+                            <constraint firstItem="Z2m-Jt-0sE" firstAttribute="top" secondItem="Xad-yU-kEc" secondAttribute="bottom" constant="15" id="zI9-IG-rfR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="_textField" destination="LnW-jl-r9K" id="FJ1-MT-bcE"/>
+                        <outlet property="mailSubjectTextField" destination="Z2m-Jt-0sE" id="bY0-mF-JHX"/>
+                        <outlet property="mailTextFieldConstraints" destination="4hU-bM-C18" id="T7A-0m-q4N"/>
                         <outlet property="outputType" destination="Xad-yU-kEc" id="LXL-yN-BBE"/>
+                        <outlet property="slackTextFieldConstraints" destination="0HF-ll-JGI" id="WD8-e6-PY4"/>
                         <outlet property="togglDate" destination="dO5-2q-uVW" id="l6E-aW-hMT"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="883"/>
+            <point key="canvasLocation" x="75" y="882.5"/>
         </scene>
     </scenes>
 </document>

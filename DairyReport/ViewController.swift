@@ -13,6 +13,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var togglDate: NSDatePicker!
     @IBOutlet weak var _textField: NSTextField!
     @IBOutlet weak var outputType: NSTextField!
+    @IBOutlet weak var mailSubjectTextField: NSTextField!
+    @IBOutlet weak var slackTextFieldConstraints: NSLayoutConstraint!
+    @IBOutlet weak var mailTextFieldConstraints: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +53,28 @@ class ViewController: NSViewController {
         
         let userdefaultsManager = UserdefaultsManager()
         
-        _textField.stringValue = userdefaultsManager.outputMode == OutputModeType.mail.rawValue ? mailTypeText(togglData: togglData) : slackTypeText(togglData: togglData)
+        switch userdefaultsManager.outputMode {
+        case OutputModeType.mail.rawValue?:
+            _textField.stringValue = mailTypeText(togglData: togglData)
+            mailSubjectTextField.stringValue = mailTypeHeaderText(devName: userdefaultsManager.dev ?? "", name: userdefaultsManager.name ?? "", date: Date())
+            
+            mailSubjectTextField.isHidden = false
+            
+            mailTextFieldConstraints.priority = NSLayoutPriorityDefaultHigh
+            slackTextFieldConstraints.priority = NSLayoutPriorityDefaultLow
+            
+        case OutputModeType.slack.rawValue?:
+            _textField.stringValue = slackTypeText(togglData: togglData)
+            
+            mailSubjectTextField.isHidden = true
+            
+            slackTextFieldConstraints.priority = NSLayoutPriorityDefaultHigh
+            mailTextFieldConstraints.priority = NSLayoutPriorityDefaultLow
+            
+        default: break
+            
+        }
+        
     }
     
     private func mailTypeText(togglData: [TogglModel]) -> String {
@@ -64,6 +88,10 @@ class ViewController: NSViewController {
         
         return header + body + fotter
         
+    }
+    
+    private func mailTypeHeaderText(devName dev: String, name: String, date: Date) -> String {
+        return DairyReportFormtter.convertMailSubject(from: dev, userName: name, date: date)
     }
     
     private func slackTypeText(togglData: [TogglModel]) -> String {
