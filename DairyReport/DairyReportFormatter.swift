@@ -17,16 +17,15 @@ struct DairyReportFormtter {
     ///
     /// - Parameter models: togglModels
     /// - Returns: convetedString
-    static func convertBody(fromModels models: [TogglModel]) -> String {
+    static func convertBody(fromModels models: TogglModel) -> String {
         
         var converted: String = ""
         
-        models.forEach { (togglModel) in
-            converted.append(String(format: NSLocalizedString("Body_Project", comment: ""), togglModel.project) + "\n")
+        models.value.forEach { (togglModel) in
+            converted.append(String(format: NSLocalizedString("Body_Project", comment: ""), togglModel.key.description, togglModel.key.tags.joined(separator: ",")) + "\n")
             
-            togglModel.detail.forEach({ (detail) in
-                converted.append(String(format: NSLocalizedString("Body_Detail", comment: ""), detail.title, convertTomm(fromToggleCost: detail.cost)) + "\n")
-            })
+            converted.append(String(format: NSLocalizedString("Body_Detail", comment: ""), togglModel.key.project, convertTomm(fromToggleCost: togglModel.value)) + "\n")
+            
         }
         
         converted.append(NSLocalizedString("Body_Impression", comment: "") + "\n")

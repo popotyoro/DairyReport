@@ -49,7 +49,7 @@ class ViewController: NSViewController {
         NotificationCenter.default.removeObserver(self, name: UserDefaults.didChangeNotification, object: nil)
     }
     
-    func refreshTextFiled(togglData: [TogglModel]) {
+    func refreshTextFiled(togglData: TogglModel) {
         
         let userdefaultsManager = UserdefaultsManager()
         
@@ -77,7 +77,7 @@ class ViewController: NSViewController {
         
     }
     
-    private func mailTypeText(togglData: [TogglModel]) -> String {
+    private func mailTypeText(togglData: TogglModel) -> String {
         
         let header = DairyReportFormtter.convertHeader(dev: (UserDefaults.standard.string(forKey: UserDefaultKey.dev.rawValue) ?? ""),
                                                        name: (UserDefaults.standard.string(forKey: UserDefaultKey.name.rawValue) ?? "")) + "\n\n"
@@ -94,7 +94,7 @@ class ViewController: NSViewController {
         return DairyReportFormtter.convertMailSubject(from: dev, userName: name, date: date)
     }
     
-    private func slackTypeText(togglData: [TogglModel]) -> String {
+    private func slackTypeText(togglData: TogglModel) -> String {
         return DairyReportFormtter.convertBody(fromModels: togglData)
     }
     
