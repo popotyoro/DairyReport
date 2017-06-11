@@ -14,7 +14,7 @@ struct DairyReportDataKey: Hashable {
     var tags: [String]
     
     static func ==(lhs: DairyReportDataKey, rhs: DairyReportDataKey) -> Bool {
-        return lhs.description == rhs.description
+        return lhs.hashValue == rhs.hashValue
     }
     
     var hashValue: Int {
