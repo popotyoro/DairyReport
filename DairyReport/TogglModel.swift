@@ -8,12 +8,20 @@
 
 import Foundation
 
-struct TogglModel {
+struct DairyReportDataKey: Hashable {
+    var description: String
     var project: String
-    var detail: [ProjectDetail]
+    var tags: [String]
+    
+    static func ==(lhs: DairyReportDataKey, rhs: DairyReportDataKey) -> Bool {
+        return lhs.description == rhs.description
+    }
+    
+    var hashValue: Int {
+        return (description + project + tags.joined(separator: ",")).hashValue
+    }
 }
 
-struct ProjectDetail {
-    var title: String
-    var cost: Int
+struct TogglModel {
+    var value: Dictionary<DairyReportDataKey, Int>
 }

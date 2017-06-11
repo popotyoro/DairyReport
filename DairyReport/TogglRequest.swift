@@ -14,10 +14,10 @@ class TogglRequest {
     static let requestHeader = "api_token"
     
     struct TogglRequestParam {
-        static let url: String = "https://toggl.com/reports/api/v2/summary/"
+        static let url: String = "https://toggl.com/reports/api/v2/details/"
     }
     
-    static func requestTogglReport(date: Date, completionHandler: (([TogglModel]) -> ())?) {
+    static func requestTogglReport(date: Date, completionHandler: ((TogglModel) -> ())?) {
         
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ja_JP")
@@ -37,21 +37,25 @@ class TogglRequest {
             "Authorization": authValue
         ]
         
-        var togglData: [TogglModel] = []
+        var togglData: TogglModel = TogglModel(value: [:])
         
         Alamofire.request(TogglRequestParam.url, parameters: paramerters, headers: headers).responseJSON {
             response in
             debugPrint(response)
             guard let data = response.result.value else { return }
             let jsons = JSON(data)
+            
             jsons["data"].forEach{(_, json) in
-                debugPrint(json["title"]["project"])
-                let project = json["title"]["project"].stringValue
-                var detailData: [ProjectDetail] = []
-                json["items"].forEach{(index, item) in
-                    detailData.append(ProjectDetail(title: item["title"]["time_entry"].stringValue, cost: item["time"].intValue))
+                
+                let key = DairyReportDataKey(description: json["description"].stringValue,
+                                             project: json["project"].stringValue,
+                                             tags: json["tags"].arrayValue.map{$0.stringValue})
+                
+                if var value = togglData.value[key] {
+                    value += json["dur"].intValue
+                } else {
+                    togglData.value[key] = json["dur"].intValue
                 }
-                togglData.append(TogglModel(project: project, detail: detailData))
             }
             
             completionHandler?(togglData)
