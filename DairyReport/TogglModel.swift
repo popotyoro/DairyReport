@@ -10,7 +10,6 @@ import Foundation
 
 struct DairyReportDataKey: Hashable {
     var description: String
-    var project: String
     var tags: [String]
     
     static func ==(lhs: DairyReportDataKey, rhs: DairyReportDataKey) -> Bool {
@@ -18,10 +17,11 @@ struct DairyReportDataKey: Hashable {
     }
     
     var hashValue: Int {
-        return (description + project + tags.joined(separator: ",")).hashValue
+        return (description + tags.joined(separator: ",")).hashValue
     }
 }
 
 struct TogglModel {
-    var value: Dictionary<DairyReportDataKey, Int>
+    typealias ProjectName = String
+    var value: Dictionary<ProjectName, Dictionary<DairyReportDataKey, Int>>
 }
