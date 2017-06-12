@@ -1,15 +1,15 @@
-/* 
-  Localizable.strings
-  DairyReport
-
-  Created by popota on 2017/04/15.
-  Copyright © 2017年 Popota. All rights reserved.
-*/
+/*
+ Localizable.strings
+ DairyReport
+ 
+ Created by popota on 2017/04/15.
+ Copyright © 2017年 Popota. All rights reserved.
+ */
 
 "MailSubject" = "日報_%@【開発%@ %@】";
 "Header" = "各位\nお疲れ様です。開発%@部 %@です。\n本日の日報を提出致します。ご確認ください。";
-"Body_Project" = "■ %@ : %@";
-"Body_Detail" = "\t✅ %@\n\t🕒 cost %@\n\t\t👉 Memo";
+"Body_Project" = "■ %@";
+"Body_Detail" = "\t- %@\n\t\t✅  %@\n\t\t🕒  %@\n\t\t\t👉  Memo";
 "Body_Impression" = "■ ひとこと\n\t 👀";
 
 "Fotter" = "以上、よろしくお願い致します。";

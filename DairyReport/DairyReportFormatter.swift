@@ -22,10 +22,11 @@ struct DairyReportFormtter {
         var converted: String = ""
         
         models.value.forEach { (togglModel) in
-            converted.append(String(format: NSLocalizedString("Body_Project", comment: ""), togglModel.key.description, togglModel.key.tags.joined(separator: ",")) + "\n")
+            converted.append(String(format: NSLocalizedString("Body_Project", comment: ""), togglModel.key) + "\n")
             
-            converted.append(String(format: NSLocalizedString("Body_Detail", comment: ""), togglModel.key.project, convertTomm(fromToggleCost: togglModel.value)) + "\n")
-            
+            togglModel.value.forEach({ (key, dur) in
+                converted.append(String(format: NSLocalizedString("Body_Detail", comment: ""), key.tags.joined(separator: ","), key.description, convertTomm(fromToggleCost: dur)) + "\n")
+            })
         }
         
         converted.append(NSLocalizedString("Body_Impression", comment: "") + "\n")

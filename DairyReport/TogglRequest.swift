@@ -47,14 +47,22 @@ class TogglRequest {
             
             jsons["data"].forEach{(_, json) in
                 
-                let key = DairyReportDataKey(description: json["description"].stringValue,
-                                             project: json["project"].stringValue,
-                                             tags: json["tags"].arrayValue.map{$0.stringValue})
+                let projectKey = json["project"].stringValue
                 
-                if var value = togglData.value[key] {
-                    value += json["dur"].intValue
+                if var pojectValue = togglData.value[projectKey] {
+                    var dur: Int = 0
+                    if let projectSubValue = pojectValue[DairyReportDataKey(description: json["description"].stringValue, tags: json["tags"].arrayValue.map{$0.stringValue})] {
+                        // durを加算
+                        dur = projectSubValue + json["dur"].intValue
+                    } else {
+                        // 新規key登録
+                        dur = json["dur"].intValue
+                    }
+                    togglData.value[projectKey]?[DairyReportDataKey(description: json["description"].stringValue, tags: json["tags"].arrayValue.map{$0.stringValue})] = dur
                 } else {
-                    togglData.value[key] = json["dur"].intValue
+                    togglData.value[projectKey] = [DairyReportDataKey(description: json["description"].stringValue,
+                                                                      tags: json["tags"].arrayValue.map{$0.stringValue}):
+                        json["dur"].intValue]
                 }
             }
             

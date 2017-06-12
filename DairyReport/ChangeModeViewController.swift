@@ -17,12 +17,12 @@ class ChangeModeViewController: NSViewController {
     private let demoOutputTextMail = NSLocalizedString("Header", comment: "")
         + "\n"
         + String(format: NSLocalizedString("Body_Project", comment: ""), "Project名") + "\n"
-        + String(format: NSLocalizedString("Body_Detail", comment: ""), "Title", "Subject") + "\n"
+        + String(format: NSLocalizedString("Body_Detail", comment: ""), "Tags", "Title", "Cost") + "\n"
         + NSLocalizedString("Body_Impression", comment: "") + "\n"
         + NSLocalizedString("Fotter", comment: "")
     
     private let demoOutputTextSlack = String(format: NSLocalizedString("Body_Project", comment: ""), "Project名") + "\n"
-        + String(format: NSLocalizedString("Body_Detail", comment: ""), "Title", "Subject") + "\n"
+        + String(format: NSLocalizedString("Body_Detail", comment: ""), "Tags", "Title", "Cost") + "\n"
         + NSLocalizedString("Body_Impression", comment: "") + "\n"
 
     override func viewDidLoad() {
