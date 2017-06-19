@@ -24,7 +24,9 @@ struct DairyReportFormtter {
         models.value.forEach { (togglModel) in
             converted.append(String(format: NSLocalizedString("Body_Project", comment: ""), togglModel.key) + "\n")
             
-            togglModel.value.forEach({ (key, dur) in
+            let sortedDictionary = togglModel.value.sorted(by: { $0.key.tags.joined() < $1.key.tags.joined() })
+            
+            sortedDictionary.forEach({ (key, dur) in
                 converted.append(String(format: NSLocalizedString("Body_Detail", comment: ""), key.tags.joined(separator: ","), key.description, convertTomm(fromToggleCost: dur)) + "\n")
             })
         }
